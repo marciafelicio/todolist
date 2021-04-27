@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import TaskLists from "./pages/TaskLists";
+import Tasks from "./pages/Tasks";
+import { Layout } from "antd";
+import "antd/dist/antd.css";
+import MinhaConta from "./pages/MinhaConta";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout.Content style={{ padding: 20 }}>
+      <Router>
+        <Link to="/">Lista de Tarefas</Link> | 
+        <Link to="/list/1">Tarefas</Link>  |
+        <Link to="/minha-conta">Minha conta</Link>
+        
+        <Switch>
+          <Route exact path="/">
+            <TaskLists />
+          </Route>
+          <Route exact path="/list/:id">
+            <Tasks />
+          </Route>
+          <Route exact path="/minha-conta">
+            <MinhaConta />
+          </Route>
+        </Switch>
+
+      </Router>
+    </Layout.Content>
   );
 }
 

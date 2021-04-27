@@ -1,0 +1,30 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "Estudos",
+      "status": "Feito"
+    },
+    {
+      "id": 2,
+      "name": "Trabalho",
+      "status": "Feito"
+    },
+    {
+      "id": 3,
+      "name": "Esportes",
+      "status": "Pendente"
+    },
+    {
+      "id": 4,
+      "name": "Marcinha fazer atividade",
+      "status": "Pendente"
+    },
+    {
+      "id": 5,
+      "name": "Joel nadar",
+      "status": "Pendente"
+    }
+  ]
+  
+}
